@@ -1,7 +1,91 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <?xaml-comp compile="true" ?>
-<ResourceDictionary 
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:SkeletonSample.Models"
+    xmlns:sk="clr-namespace:Maui.Skeleton;assembly=Maui.Skeleton">
+
+
+    <DataTemplate x:Key="ItemTemplate" x:DataType="models:Item">
+        <ViewCell>
+            <StackLayout
+                Margin="30,0"
+                Padding="0,10"
+                Orientation="Horizontal"
+                Spacing="20">
+                <Frame
+                    Padding="0"
+                    sk:Skeleton.BackgroundColor="{StaticResource GrayColor}"
+                    sk:Skeleton.IsBusy="{Binding IsBusy}"
+                    sk:Skeleton.IsParent="True"
+                    BackgroundColor="{StaticResource WhiteColor}"
+                    CornerRadius="20"
+                    HasShadow="False"
+                    HeightRequest="70"
+                    IsClippedToBounds="True"
+                    WidthRequest="70">
+                    <Image Aspect="AspectFill" Source="{Binding Image}" />
+                </Frame>
+
+                <StackLayout Margin="15" Spacing="4">
+                    <Frame
+                        Padding="0"
+                        sk:Skeleton.BackgroundColor="{StaticResource GrayColor}"
+                        sk:Skeleton.IsBusy="{Binding IsBusy}"
+                        BackgroundColor="Transparent"
+                        CornerRadius="5"
+                        HasShadow="False"
+                        HorizontalOptions="Start">
+                        <Label
+                            sk:Skeleton.Hide="True"
+                            sk:Skeleton.IsBusy="{Binding IsBusy}"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="Start"
+                            Text="{Binding Title}"
+                            TextColor="{StaticResource BlackColor}" />
+                    </Frame>
+                    <Frame
+                        Padding="0"
+                        sk:Skeleton.BackgroundColor="{StaticResource GrayColor}"
+                        sk:Skeleton.IsBusy="{Binding IsBusy}"
+                        BackgroundColor="Transparent"
+                        CornerRadius="5"
+                        HasShadow="False"
+                        HorizontalOptions="Start">
+                        <Label
+                            sk:Skeleton.Hide="True"
+                            sk:Skeleton.IsBusy="{Binding IsBusy}"
+                            FontSize="14"
+                            HorizontalOptions="Start"
+                            Text="{Binding Subtitle}"
+                            TextColor="{StaticResource DarkGrayColor}" />
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Margin="0,15" HorizontalOptions="EndAndExpand">
+                    <Frame
+                        Padding="0"
+                        sk:Skeleton.BackgroundColor="{StaticResource GrayColor}"
+                        sk:Skeleton.IsBusy="{Binding IsBusy}"
+                        sk:Skeleton.IsParent="True"
+                        BackgroundColor="Transparent"
+                        CornerRadius="5"
+                        HasShadow="False"
+                        HorizontalOptions="End"
+                        IsClippedToBounds="True">
+                        <Image
+                            sk:Skeleton.Hide="True"
+                            sk:Skeleton.IsBusy="{Binding IsBusy}"
+                            Aspect="AspectFill"
+                            HeightRequest="20"
+                            Source="health.png"
+                            WidthRequest="20" />
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ViewCell>
+    </DataTemplate>
 
 </ResourceDictionary>

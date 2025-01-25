@@ -7,7 +7,6 @@ namespace SkeletonSample.Pages
         public HorizontalShake()
         {
             InitializeComponent();
-            this.BindingContext = new HorizontalShakeViewModel();
         }
 
         protected override void OnAppearing()

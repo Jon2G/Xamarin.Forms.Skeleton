@@ -7,7 +7,6 @@ namespace SkeletonSample.Pages
         public Beat()
         {
             InitializeComponent();
-            this.BindingContext = new BeatViewModel();
         }
 
         protected override void OnAppearing()

@@ -7,7 +7,6 @@ namespace SkeletonSample.Pages
         public Fade()
         {
             InitializeComponent();
-            this.BindingContext = new FadeViewModel();
         }
 
         protected override void OnAppearing()

@@ -7,7 +7,6 @@ namespace SkeletonSample.Pages
         public CustomAnimation()
         {
             InitializeComponent();
-            BindingContext = new CustomAnimationViewModel();
         }
 
         protected override void OnAppearing()

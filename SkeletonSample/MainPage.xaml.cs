@@ -1,5 +1,5 @@
 ﻿using SkeletonSample.Pages;
-
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SkeletonSample;
 
 public partial class MainPage : TabbedPage

@@ -7,7 +7,6 @@ namespace SkeletonSample.Pages
         public Skeleton()
         {
             InitializeComponent();
-            this.BindingContext = new SkeletonViewModel();
         }
 
         protected override void OnAppearing()

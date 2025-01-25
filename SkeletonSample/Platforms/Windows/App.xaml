@@ -1,9 +1,7 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="SkeletonSample.WinUI.App"
+    x:Class="SkeletonSample.Platforms.Windows.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:SkeletonSample.WinUI">
-
-</maui:MauiWinUIApplication>
+    xmlns:local="using:SkeletonSample.Platforms.Windows"
+    xmlns:maui="using:Microsoft.Maui" />
 
