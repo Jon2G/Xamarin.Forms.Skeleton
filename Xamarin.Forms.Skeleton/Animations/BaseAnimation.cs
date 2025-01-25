@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using AsyncAwaitBestPractices;
 
 #if NET6_0_OR_GREATER
 namespace Maui.Skeleton.Animations
@@ -17,12 +18,12 @@ namespace Xamarin.Forms.Skeleton.Animations
 
         public void Start(BindableObject bindable)
         {
-            Task.Run(async () => { await this.Run(bindable); });
+            Task.Run(async () => { await this.Run(bindable); }).SafeFireAndForget();
         }
 
         public void Stop(BindableObject bindable)
         {
-            Task.Run(async () => { await this.StopAnimation(bindable); });
+            Task.Run(async () => { await this.StopAnimation(bindable); }).SafeFireAndForget();
         }
 
         private async Task<bool> Run(BindableObject bindable)

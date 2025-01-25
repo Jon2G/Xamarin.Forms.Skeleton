@@ -73,6 +73,10 @@
 		</Compile>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="AsyncAwaitBestPractices" Version="9.0.0" />
+	</ItemGroup>
+
 
 
 </Project>
